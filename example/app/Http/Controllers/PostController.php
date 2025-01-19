@@ -49,13 +49,4 @@ class PostController extends Controller
         }
         return redirect('/');
     }
-
-    public function toggleDone(Post $post){
-        if($post->user_id !== auth()->id()){
-            return redirect('/');
-        }
-        $post->done = !$post->done;
-        $post->save();
-        return response()->json(['success' => true]);
-    }
 }
