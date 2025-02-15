@@ -22,10 +22,6 @@ Route::get('/login-page', function () {
     return view('login-page');
 });
 
-Route::get('/play', function () {
-    return view('MarioKart');
-});
-
 Route::post('/register', [UserController::class, 'register']);
 
 Route::post('/login', [UserController::class, 'login']);
